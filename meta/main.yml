@@ -1,12 +1,12 @@
 ---
 # Workstation as Code
-# Copyright Nicola Musatti 2020 - 2025.
+# Copyright Nicola Musatti 2025.
 
 galaxy_info:
-  role_name: waco_python
+  role_name: waco_bootstrap_test
   namespace: waco_org
   author: Nicola Musatti
-  description: Waco Python role
+  description: Test harness for the Waco Bootstrap code
   company: The Waco project
 
   license: GPLv3

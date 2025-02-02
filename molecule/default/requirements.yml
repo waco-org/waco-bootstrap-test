@@ -1,6 +1,6 @@
 ---
-- src: nmusatti.source_python
+# - src: nmusatti.source_python
 
-- src: geerlingguy.repo-epel
+# - src: geerlingguy.repo-epel
 
-- src: bobbyrenwick.pip
+# - src: bobbyrenwick.pip
