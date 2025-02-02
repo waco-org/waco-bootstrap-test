@@ -5,7 +5,7 @@ waco_bootstrap_test
 
 This Ansible role serves the sole purpose of testing the ``waco-bootstrap`` project on different
 platforms. At this time tests are run on Rocky Linux 9, CentOS Stream 10, CentOS Stream 9,
-Fedora 41, Fedora 40, Fedora 39, Ubuntu 24.04, Ubuntu 22.04 and Ubuntu 20.04.
+Fedora 41, Fedora 40, Fedora 39, Ubuntu 24.04 and Ubuntu 22.04.
 
 
 Requirements
