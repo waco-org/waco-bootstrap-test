@@ -1,4 +1,4 @@
-import os
+import os, pathlib
 
 import testinfra.utils.ansible_runner
 
@@ -7,9 +7,15 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts('all')
 
 
-def test_hosts_file(host):
-    f = host.file('/etc/hosts')
-
+def test_waco_user(host):
+    assert host.group("waco").exists
+    assert host.user("waco").exists
+    h = pathlib.Path(host.user("waco").home)
+    f = host.file(str(h / ".ssh/authorized_keys"))
     assert f.exists
-    assert f.user == 'root'
-    assert f.group == 'root'
+    assert f.mode == 0o600
+
+def test_waco_installation(host):
+    h = pathlib.Path(host.user("waco").home)
+    f = host.file(str(h / "waco/settings/master.yml"))
+    assert f.exists
